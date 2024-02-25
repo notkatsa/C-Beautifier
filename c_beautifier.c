@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-	int lastch = 32, quotes = 0, inhash = 0, open = 0, done, apostr = 0, blocks = 0, ch, whsp = 0, stline = 1;
+	int lastch = 32, quotes = 0, /* inhash = 0, */ open = 0, done, apostr = 0, blocks = 0, ch, whsp = 0, stline = 1;
 	while ((ch = getchar()) != EOF) {
 		done = 0;
 		if (ch == ' ' || ch == '\t' || ch == '\n'){
@@ -59,7 +59,7 @@ int main(){
 			}
 
 		}
-		if (stline == 1 & done != 1) { // incase it wasn't done earlier
+		if (stline == 1 && done != 1) { // incase it wasn't done earlier     
 			for (int i = 0 ; i < blocks ; i++) {
 				putchar('\t');
 			}
